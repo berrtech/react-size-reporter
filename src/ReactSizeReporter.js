@@ -60,7 +60,7 @@ class SizeReporter extends React.Component {
   }
 
   render(){
-    const { children, ...props } = this.props;
+    const { children, onSizeChange, ...props } = this.props;
 
     if (this.node){
       this.offsetHeight = this.node.offsetHeight;
