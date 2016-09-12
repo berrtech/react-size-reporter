@@ -41,6 +41,29 @@ Children with static or dynamic height or width
 
 You can pass any valid props, like `style` or `className` to SizeReporter, they will be applied to container
 
+## Public methods
+
+#### `reattachResizeListener`
+
+Use this if for any reason `onSizeChange` doesn't trigger anymore
+
+```js
+reattach = () => this.sizeReporter.reattachResizeListener()
+
+render(){
+  return (
+  <SizeReporter 
+    onSizeChange={({height, width}) => console.log(height, width)}
+    ref={ref => ref ? this.sizeReporter = ref : null}
+  >
+    <div>CONTENT GOES HERE</div>
+    <div>AND HERE</div>
+    <button type='button' onClick={this.reattach}>Reattach!</button>
+  </SizeReporter>
+  )
+}
+```
+
 ## Run
 
 To run example, use `npm start` and then go to http://localhost:8080
