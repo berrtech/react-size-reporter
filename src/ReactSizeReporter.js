@@ -21,10 +21,7 @@ class SizeReporter extends React.Component {
 
   componentDidMount(){
     this.node = ReactDOM.findDOMNode(this);
-    this.ResizeSensor = new ResizeSensor(
-      this.node,
-      () => this.props.onSizeChange({height: this.node.offsetHeight, width: this.node.offsetWidth})
-    );
+    this.attachListener();
     this.props.onSizeChange({height: this.node.offsetHeight, width: this.node.offsetWidth});
   }
 
@@ -48,8 +45,22 @@ class SizeReporter extends React.Component {
     }
   }
 
+  attachListener = () => {
+    if (this.node){
+      this.ResizeSensor = new ResizeSensor(
+        this.node,
+        () => this.props.onSizeChange({height: this.node.offsetHeight, width: this.node.offsetWidth})
+      );
+    }
+  }
+
+  reattachResizeListener = () => {
+    this.ResizeSensor.detach();
+    this.attachListener();
+  }
+
   render(){
-    const { children, onSizeChange, ...props } = this.props;
+    const { children, ...props } = this.props;
 
     if (this.node){
       this.offsetHeight = this.node.offsetHeight;
