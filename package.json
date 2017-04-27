@@ -24,6 +24,14 @@
   ],
   "author": "Albert Batrshin <berrtech@gmail.com> (http://fcode.ninja/)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/berrtech/react-size-reporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/berrtech/react-size-reporter/issues"
+  },
+  "homepage": "https://github.com/berrtech/react-size-reporter",
   "peerDependencies": {
     "react": "^0.14 || ^15",
     "react-dom": "^0.14 || ^15"
