@@ -1,6 +1,6 @@
 {
   "name": "react-size-reporter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React component-wrapper detecting size changes of it's children",
   "main": "lib/ReactSizeReporter.js",
   "scripts": {
