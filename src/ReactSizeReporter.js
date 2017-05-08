@@ -2,14 +2,15 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import ResizeSensor from './vendor/ResizeSensor/ResizeSensor.js';
 
 import {shouldComponentUpdate} from 'react/lib/ReactComponentWithPureRenderMixin';
 
 class SizeReporter extends React.Component {
   static propTypes = {
-    children: React.PropTypes.node.isRequired,
-    onSizeChange: React.PropTypes.func.isRequired
+    children: PropTypes.node.isRequired,
+    onSizeChange: PropTypes.func.isRequired
   }
 
   constructor(props){
