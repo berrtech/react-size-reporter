@@ -5,7 +5,7 @@
   "main": "lib/ReactSizeReporter.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env NODE_ENV=development webpack-dev-server",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --port 9001",
     "build": "parallelshell -w \"npm run build:lib -s\" \"npm run build:dist -s\" \"npm run build:min -s\"",
     "build:lib": "cross-env NODE_ENV=production babel src --out-dir lib --source-maps --ignore example",
     "build:dist": "cross-env NODE_ENV=production BUILD=dist webpack",
@@ -34,7 +34,8 @@
   "homepage": "https://github.com/berrtech/react-size-reporter",
   "peerDependencies": {
     "react": "^0.14 || ^15",
-    "react-dom": "^0.14 || ^15"
+    "react-dom": "^0.14 || ^15",
+    "prop-types": "^15.5.0"
   },
   "dependencies": {},
   "devDependencies": {
