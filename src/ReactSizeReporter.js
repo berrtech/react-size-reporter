@@ -2,14 +2,13 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import ResizeSensor from './vendor/ResizeSensor/ResizeSensor.js';
 
-import {shouldComponentUpdate} from 'react/lib/ReactComponentWithPureRenderMixin';
-
-class SizeReporter extends React.Component {
+class SizeReporter extends React.PureComponent {
   static propTypes = {
-    children: React.PropTypes.node.isRequired,
-    onSizeChange: React.PropTypes.func.isRequired
+    children: PropTypes.node.isRequired,
+    onSizeChange: PropTypes.func.isRequired
   }
 
   constructor(props){
@@ -24,8 +23,6 @@ class SizeReporter extends React.Component {
     this.attachListener();
     this.props.onSizeChange({height: this.node.offsetHeight, width: this.node.offsetWidth});
   }
-
-  shouldComponentUpdate = shouldComponentUpdate
 
   componentWillUnmount(){
     if (this.ResizeSensor){

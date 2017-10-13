@@ -13,6 +13,8 @@ This implementation uses ResizeSensor from [css-element-queries](https://github.
 npm install --save react react-dom react-size-reporter
 ```
 
+If you are using react v0.14 consider installing `react-size-reporter@^1.0.5`
+
 Don't forget to manually install peer dependencies (`react`, `react-dom`) if you use npm@3.
 
 ## Usage
@@ -52,7 +54,7 @@ reattach = () => this.sizeReporter.reattachResizeListener()
 
 render(){
   return (
-  <SizeReporter 
+  <SizeReporter
     onSizeChange={({height, width}) => console.log(height, width)}
     ref={ref => ref ? this.sizeReporter = ref : null}
   >
