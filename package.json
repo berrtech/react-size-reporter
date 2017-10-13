@@ -33,12 +33,15 @@
   },
   "homepage": "https://github.com/berrtech/react-size-reporter",
   "peerDependencies": {
-    "react": "^0.14 || ^15",
-    "react-dom": "^0.14 || ^15",
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0",
     "prop-types": "^15.5.0"
   },
   "dependencies": {},
   "devDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "prop-types": "^15.5.0",
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
