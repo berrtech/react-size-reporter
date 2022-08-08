@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "React component-wrapper detecting size changes of it's children",
   "main": "lib/ReactSizeReporter.js",
+  "types": "./ReactSizeReporter.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_ENV=development webpack-dev-server",
